@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <!-- <title>Album example for Bootstrap</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/"> -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="list.css" rel="stylesheet">
+    <title>Doodle Room Lobby</title>
+    <link rel="icon" href="doodleroom.png">
+  </head>
+
+  <body style="background-image: url('doodleblack.png')">
+
+    <div class="collapse bg-inverse" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 py-4">
+            <h4 class="text-white">About</h4>
+            <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+          </div>
+          <div class="col-sm-4 py-4">
+            <h4 class="text-white">Contact</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Follow on Twitter</a></li>
+              <li><a href="#" class="text-white">Like on Facebook</a></li>
+              <li><a href="#" class="text-white">Email me</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-inverse bar">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand">Doodle Room</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <section class="jumbotron text-center">
+      <div class="container">
+          <!-- <h1 class="jumbotron-heading" class="text-white" >Doodle Room</h1> -->
+        <h1 class="text-white" >Doodle Room</h1>
+        <p class="lead text-muted">Create a room and start doodle together!!</p>
+        <p>
+          <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#createroom">Create Room</a>
+          <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#joinroom">Join Room</a>
+        </p>
+      </div>
+    </section>
+    
+    <form action="board.html" method="GET">
+      <div class="modal fade" id="createroom" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Create a room</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                
+                  <div class="form-group">
+                      <h6>Room Name</h6>
+                      <!-- <label for="exampleInputEmail1">Room Name</label> -->
+                      <input name="inputEmail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="# Enter a name">
+                      <small id="emailHelp" class="form-text text-muted">Make it awesome, fun and informative</small>
+                  </div>
+                  <div class="form-group">
+                    <h6>Keyword</h6>
+                    <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="E.g. 123456 ">
+                    <small id="emailHelp" class="form-text text-muted">Make it private for someone to access the room</small>
+                  </div>
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <input type="submit" class="btn btn-primary" >Create</input>
+              </div>
+            </div>
+          </div>
+        </div>
+    </form>
+
+      <div class="modal fade" id="roomdetail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Invite friends to Doodle Room</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <h5>Invite via Link</h5>
+                  <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="https://doodle.com/room" aria-label="Recipient's username" aria-describedby="basic-addon2" readonly>
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">Copy</button>
+                      </div>
+                    </div>
+                  <hr>
+                  <h5>Invite via Doodle Room ID and Keyword</h5>
+                  <div class="form-group row">
+                      <label for="inputEmail3" class="col-sm-3 col-form-label">Room ID :</label>
+                      <div class="col-sm-3">
+                        <input type="email" class="form-control" id="inputEmail3" placeholder="000001" readonly>
+                      </div>
+                      <label for="inputEmail3" class="col-sm-3 col-form-label">Keyword :</label>
+                      <div class="col-sm-3">
+                          <input type="email" class="form-control" id="inputEmail3" placeholder="123456" readonly>
+                        </div>
+                    </div>
+                </div>
+              <div class="modal-footer">
+                  <a href="board.html" class="btn btn-primary" role="button">Done</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <div class="modal fade" id="joinroom" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Join a room</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <h6>Room Name</h6>
+              <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Room ID">
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Keyword">
+                  </div>
+              </div>  
+
+              <h3 class="text-center"><br>OR</h3>
+
+              <div class="form-group">
+                <h6>Paste the URL</h6>
+                <input type="text" class="form-control" placeholder="E.g. https://doodle.com/room">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="board.html" class="btn btn-primary" role="button">Join</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="album text-muted">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" data-src="holder.js/100px280/thumb" alt="100%x280" style="height: 280px; width: 100%; display: block;" src="roomlist_picture/Capture7.png" data-holder-rendered="true">
+              <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada luctus tincidunt. Aliquam malesuada orci eget ex euismod, ac malesuada.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-group-sm btn-outline-primary" data-toggle="modal" data-target="#joinroomlist">Join Room</button>
+                  </div>
+                  <small class="text-muted">Just now</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" data-src="holder.js/100px280/thumb" alt="100%x280" style="height: 280px; width: 100%; display: block;" src="roomlist_picture/44555559_715458902146160_7063902286182875136_n.png" data-holder-rendered="true">
+              <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada luctus tincidunt. Aliquam malesuada orci eget ex euismod, ac malesuada.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                      <button type="button" class="btn btn-group-sm btn-outline-primary" data-toggle="modal" data-target="#joinroomlist">Join Room</button>
+                  </div>
+                  <small class="text-muted">1 day ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" data-src="holder.js/100px280/thumb" alt="100%x280" style="height: 280px; width: 100%; display: block;" src="roomlist_picture/Capture.png" data-holder-rendered="true">
+              <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada luctus tincidunt. Aliquam malesuada orci eget ex euismod, ac malesuada.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                      <button type="button" class="btn btn-group-sm btn-outline-primary" data-toggle="modal" data-target="#joinroomlist">Join Room</button>
+                  </div>
+                  <small class="text-muted">9 mins ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" data-src="holder.js/100px280/thumb" alt="100%x280" style="height: 280px; width: 100%; display: block;" src="roomlist_picture/44635855_321859921933827_5020476865312194560_n.png" data-holder-rendered="true">
+              <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada luctus tincidunt. Aliquam malesuada orci eget ex euismod, ac malesuada.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                      <button type="button" class="btn btn-group-sm btn-outline-primary" data-toggle="modal" data-target="#joinroomlist">Join Room</button>
+                  </div>
+                  <small class="text-muted">1 week ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" data-src="holder.js/100px280/thumb" alt="100%x280" style="height: 280px; width: 100%; display: block;" src="roomlist_picture/Capture3.png" data-holder-rendered="true">
+              <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada luctus tincidunt. Aliquam malesuada orci eget ex euismod, ac malesuada.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                      <button type="button" class="btn btn-group-sm btn-outline-primary" data-toggle="modal" data-target="#joinroomlist">Join Room</button>
+                  </div>
+                  <small class="text-muted">20 days ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" data-src="holder.js/100px280/thumb" alt="100%x280" style="height: 280px; width: 100%; display: block;" src="roomlist_picture/44659281_2325069040854120_195251055817129984_n.png" data-holder-rendered="true">
+              <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada luctus tincidunt. Aliquam malesuada orci eget ex euismod, ac malesuada.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                      <button type="button" class="btn btn-group-sm btn-outline-primary" data-toggle="modal" data-target="#joinroomlist">Join Room</button>
+                  </div>
+                  <small class="text-muted">1 month ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" data-src="holder.js/100px280/thumb" alt="100%x280" style="height: 280px; width: 100%; display: block;" src="roomlist_picture/Capture1.PNG" data-holder-rendered="true">
+              <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada luctus tincidunt. Aliquam malesuada orci eget ex euismod, ac malesuada.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                      <button type="button" class="btn btn-group-sm btn-outline-primary" data-toggle="modal" data-target="#joinroomlist">Join Room</button>
+                  </div>
+                  <small class="text-muted">1 month ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" data-src="holder.js/100px280/thumb" alt="100%x280" style="height: 280px; width: 100%; display: block;" src="roomlist_picture/44691018_1854336814635984_7439742070958325760_n.png" data-holder-rendered="true">
+              <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada luctus tincidunt. Aliquam malesuada orci eget ex euismod, ac malesuada.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                      <button type="button" class="btn btn-group-sm btn-outline-primary" data-toggle="modal" data-target="#joinroomlist">Join Room</button>
+                  </div>
+                  <small class="text-muted">2 months ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img class="card-img-top" data-src="holder.js/100px280/thumb" alt="100%x280" style="height: 280px; width: 100%; display: block;" src="roomlist_picture/44754596_1735854106542462_8447488462575108096_n.png" data-holder-rendered="true">
+              <div class="card-body">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada luctus tincidunt. Aliquam malesuada orci eget ex euismod, ac malesuada.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                     <button type="button" class="btn btn-group-sm btn-outline-primary" data-toggle="modal" data-target="#joinroomlist">Join Room</button>
+                  </div>
+                  <small class="text-muted">1 year ago</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="joinroomlist" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Join Room</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group text-center">
+                      <h5 class="text-center" >Enter room keyword</h5>
+                      <input type="text" class="col-form-label-sm" style="margin:auto" id="recipient-name" placeholder="Keyword">
+                    </div>
+                  </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <a href="board.html" class="btn btn-primary" role="button">Join</a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      $(function () {
+        Holder.addTheme("thumb", { background: "#55595c", foreground: "#eceeef", text: "Thumbnail" });
+      });
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

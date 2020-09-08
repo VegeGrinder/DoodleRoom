@@ -1,0 +1,7 @@
+CREATE TABLE room
+(
+roomID int(5) ZEROFILL NOT NULL AUTO_INCREMENT UNIQUE,
+password text,
+roomName text,
+linkURL varchar(500)
+);

@@ -1,0 +1,276 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Doodle Room</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .box {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        margin: 40px;
+         float: left;
+        
+      }
+      
+      .box-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      }
+      
+      .box:hover .box-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .box-front, .box-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      
+      .box-front {
+        background-color: #bbb;
+        color: black;
+        z-index: 2;
+      }
+      
+      .box-back {
+        background-color: black;
+        color: white;
+        transform: rotateY(180deg);
+        z-index: 1;
+      }
+      
+      
+      .box1 {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        margin-bottom: 100px;
+        margin-right: 80px;
+        margin-left: 5px;
+        float: left;
+      }
+      
+      
+      .box1:hover .box-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .box2 {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        margin-bottom: 100px;
+        margin-right: 80px;
+        margin-left: 5px;
+        float: left;
+      }
+      
+      
+      .box2:hover .box-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .box3 {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+         perspective: 1000px;
+        margin-bottom: 100px;
+        margin-right: 80px;
+        margin-left: 80px;
+         float: left;
+        
+      }
+      
+      
+      .box3:hover .box-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .box4 {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        margin-bottom: 100px;
+        margin-right: 80px;
+        margin-left: 5px;
+        float: left;
+      }
+      
+      
+      .box4:hover .box-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .box5 {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+        margin-bottom: 100px;
+        margin-right: 80px;
+        margin-left: 5px;
+        float: left;
+      }
+      
+      
+      .box5:hover .box-inner {
+        transform: rotateY(180deg);
+      }
+      </style>
+  </head>
+  <body style="background-image: url('doodle.png')">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Doodle Room</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="about.html">About
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.php">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="row" style="margin-top: 100px">
+        <h1>About</h1>
+      </div>
+      <div class="row d-block p-2 bg-dark text-white">
+        Doodle room is web application that connects with your friends by drawing together on a whiteboard. We have prepared a simple chat system to further improve the communication! It offers free and simple messaging services around the world.
+      </div>
+
+      <div class="row" style="margin-top: 100px">
+        <h1>Team Members:</h1>
+      </div>
+      <div class="row">
+        <div class="box">
+          <div class="box-inner">
+            <div class="box-front">
+              <img src="f1.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="box-back">
+              <h1>Poong Ka Tsun</h1> 
+              <p>132982</p> 
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-inner">
+            <div class="box-front">
+              <img src="f2.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="box-back">
+              <h1>Goh Shang Shein </h1> 
+              <p>132909</p> 
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-inner">
+            <div class="box-front">
+              <img src="f3.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="box-back">
+              <h1>Goh Wei Chung</h1> 
+              <p>132910</p> 
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      <div class="row">
+        
+        
+      </div>
+      
+      
+      <div class="row">
+        <div class="box">
+          <div class="box-inner">
+            <div class="box-front">
+              <img src="f4.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="box-back">
+              <h1>Ang Ching Wen</h1> 
+              <p>132875</p> 
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-inner">
+            <div class="box-front">
+              <img src="f5.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="box-back">
+              <h1>Ong Chia Teng</h1> 
+              <p>132978</p> 
+            </div>
+          </div>
+        </div>
+          
+        <div class="box">
+          <div class="box-inner">
+            <div class="box-front">
+              <img src="f6.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="box-back">
+              <h1>Liew Sue Hui</h1> 
+              <p>132934</p> 
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
